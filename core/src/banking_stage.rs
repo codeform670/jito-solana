@@ -1500,7 +1500,7 @@ mod tests {
                 let mut num_txs = 0;
                 const EXPECTED_TXS: usize = 1;
                 while start.elapsed() < Duration::from_secs(5) {
-                    if let Ok((_bank, (entry, tick))) =
+                    if let Ok((_bank, (entry, _tick))) =
                         entry_receiver.recv_timeout(Duration::from_millis(10))
                     {
                         num_txs += entry.transactions.len();
